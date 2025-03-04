@@ -16,7 +16,7 @@ pipeline{
         }
         stage('Test API'){
             steps{
-                sh 'newman run collections/Testhelloworld.postman_collection.json'
+                sh 'newman run Testhelloworld.postman_collection.json'
             }
         }
     }
