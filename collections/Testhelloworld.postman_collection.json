@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "285bf468-52f2-4c5d-82e6-7bb6548e0ad4",
+		"name": "Testhelloworld",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42584517",
+		"_collection_link": "https://test-1-4893.postman.co/workspace/Test2~20288678-669c-4395-a248-a204aa805938/collection/42584517-285bf468-52f2-4c5d-82e6-7bb6548e0ad4?action=share&source=collection_link&creator=42584517"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Le message de l'API est correct\", function () {\r",
+							"    pm.response.to.have.status(200);  \r",
+							"    var jsonData = pm.response.json();  \r",
+							"    pm.expect(jsonData).to.have.property(\"message\", \"Hello World from continuous deployment\");  \r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
