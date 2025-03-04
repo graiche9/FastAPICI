@@ -17,7 +17,7 @@
 							"pm.test(\"Le message de l'API est correct\", function () {\r",
 							"    pm.response.to.have.status(200);  \r",
 							"    var jsonData = pm.response.json();  \r",
-							"    pm.expect(jsonData).to.have.property(\"message\", \"Hello World from continuous deployment\");  \r",
+							"    pm.expect(jsonData).to.have.property(\"message\", \"Hello World from continus deployment\");  \r",
 							"});\r",
 							""
 						],
@@ -26,14 +26,29 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8001/",
+					"raw": "http://127.0.0.1:8001/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8001",
 					"path": [
